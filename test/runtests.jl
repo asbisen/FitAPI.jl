@@ -51,7 +51,7 @@ function mk_m2_fit_bytes()
     return vcat(header, data)
 end
 
-@testset "FitAPI M2 Typed Coverage" begin
+@testset "FitAPI Typed Coverage" begin
     opts = ParserOptions()
     @test opts.enable_logging == false
 
