@@ -1,0 +1,10 @@
+[project]
+name = "generate-global-profile"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "garmin-fit-sdk>=21.195.0",
+    "msgpack>=1.1.2",
+]
