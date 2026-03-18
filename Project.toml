@@ -1,7 +1,7 @@
 name = "FitAPI"
 uuid = "2b3079ab-5029-49f0-9d95-c98b4f72ad5f"
 version = "0.1.0"
-authors = ["FitAPI Contributors"]
+authors = ["Anand Bisen <asbisen@icloud.com>"]
 
 [deps]
 Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
