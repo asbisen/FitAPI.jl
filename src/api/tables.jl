@@ -15,6 +15,7 @@ function _merge_namedtuples(a::NamedTuple, b::NamedTuple)
 end
 
 function to_table(fit::FitAnalysisResult; message::Symbol=:record, extras_policy::Symbol=:wide)
+    extras_policy in (:wide, :long, :narrow) || throw(ArgumentError("extras_policy must be :wide, :long, or :narrow, got :$extras_policy"))
     entries = messages(fit; name=message)
     rows = NamedTuple[]
 
