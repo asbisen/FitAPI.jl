@@ -35,7 +35,5 @@ function eachmessage(io::IO; options::ParserOptions=ParserOptions())
 end
 
 function eachmessage(path::AbstractString; options::ParserOptions=ParserOptions())
-    open(path, "r") do io
-        return eachmessage(io; options=options)
-    end
+    return eachmessage(IOBuffer(read(path)); options=options)
 end
