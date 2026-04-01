@@ -86,6 +86,7 @@ end
 @inline _decode_enum(value, enum_map::Dict{Int64,Symbol}, decode::DecodeOptions) = decode.decode_enums && !isempty(enum_map) && value isa Integer ? get(enum_map, Int64(value), value) : value
 
 function _apply_affine(value::Number, scale::Float64, offset::Float64)
+    scale == 0.0 && throw(ArgumentError("scale cannot be zero in affine transform (field value: $value)"))
     return Float64(value) / scale - offset
 end
 
